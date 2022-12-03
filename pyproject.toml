@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "soccer-sdk-utils"
-version = "0.1.0"
+version = "0.0.0"
 description = "A utility library for Soccer SDK packages."
 authors = ["Omar Crosby <omar.crosby@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.2.0"
@@ -27,3 +27,22 @@ exclude = ['.env', '.venv', '.env', 'env', 'migrations', '__pycache__', 'manage.
 
 
 [tool.pytest.ini_options]
+
+
+[tool.semantic_release]
+version_source = "commit"
+version_variable = [
+    "soccer_sdk_utils/__init__.py:__version__"
+]
+version_toml = [
+    "pyproject.toml:tool.poetry.version"
+]
+version_pattern = [
+    "README.md:rev: v{version}"
+]
+major_on_zero = true
+branch = "main"
+upload_to_pypi = true
+upload_to_release = true
+commit_subject = "chore: release {version} [skip ci] ***NO_CI***"
+build_command = "poetry build"
