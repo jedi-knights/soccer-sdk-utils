@@ -109,4 +109,3 @@ class TestGetText:
 
         # Assert
         assert actual == "Example"
-
