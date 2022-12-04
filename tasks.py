@@ -49,7 +49,13 @@ def lint(c):
     # c.run("poetry run pre-commit run --all-files")
 
 
-@task(aliases=["b"], pre=[clean, lint, test], default=True)
+@task(aliases=["version"])
+def check_version(c):
+    print("Checking version...")
+    c.run("poetry run semantic-release version --noop")
+
+
+@task(aliases=["b"], pre=[clean, lint, test, check_version], default=True)
 def build(c):
     print("Building the project")
     c.run("poetry build")
