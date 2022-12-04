@@ -50,6 +50,6 @@ version_pattern = [
 major_on_zero = true
 branch = "main"
 upload_to_pypi = true
-upload_to_release = true
+upload_to_release = false
 commit_subject = "chore: release {version} [skip ci] ***NO_CI***"
 build_command = "poetry build"
