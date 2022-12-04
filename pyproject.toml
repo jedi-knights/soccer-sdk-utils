@@ -30,7 +30,9 @@ exclude = ['.env', '.venv', '.env', 'env', 'migrations', '__pycache__', 'manage.
 
 [tool.pytest.ini_options]
 addopts = "-ra -q"
-testpaths = ["tests"]
+testpaths = [
+    "tests/unit"
+]
 
 [tool.semantic_release]
 version_source = "commit"
