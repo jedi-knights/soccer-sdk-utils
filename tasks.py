@@ -55,7 +55,7 @@ def check_version(c):
     c.run("poetry run semantic-release version --noop")
 
 
-@task(aliases=["b"], pre=[clean, lint, test, check_version], default=True)
+@task(aliases=["b"], pre=[clean, lint, cover, check_version], default=True)
 def build(c):
     print("Building the project")
     c.run("poetry build")
