@@ -1,4 +1,3 @@
-import pytest
 import requests_mock
 
 from soccer_sdk_utils.page import PageObject
@@ -62,7 +61,6 @@ def test_status_code_with_response():
         m.get("https://www.google.com", text="Hello World", status_code=999)
         page.load("https://www.google.com")
 
-
     assert page.status_code == 999
 
 
@@ -97,4 +95,3 @@ def test_erase():
 def test_repr():
     page = PageObject(url="https://www.google.com")
     assert repr(page) == "<PageObject(url='https://www.google.com')>"
-
