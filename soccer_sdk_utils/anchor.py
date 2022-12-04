@@ -1,11 +1,17 @@
-def get_href(anchor):
-    if anchor is None:
+from bs4 import element
+
+
+def get_href(tag: element) -> str | None:
+    if tag is None:
         return None
 
-    if anchor.name != "a":
-        anchor = anchor.find("a")
+    if tag.name != "a":
+        tag = tag.find("a")
 
-    href = anchor.get("href")
+    if tag is None:
+        return None
+
+    href = tag.get("href")
     if href is None:
         return None
 
@@ -16,17 +22,17 @@ def get_href(anchor):
     return href
 
 
-def get_text(anchor):
-    if anchor is None:
+def get_text(tag: element) -> str | None:
+    if tag is None:
         return None
 
-    if anchor.name != "a":
-        anchor = anchor.find("a")
+    if tag.name != "a":
+        tag = tag.find("a")
 
-    if anchor is None:
+    if tag is None:
         return None
 
-    text = anchor.text.strip()
+    text = tag.text.strip()
     if len(text) == 0:
         return None
 
