@@ -61,4 +61,4 @@ jobs:
 
       - name: Test Semantic Release Version
         run: |
-          poetry run semantic-release version --noop
+          poetry run invoke check-version
