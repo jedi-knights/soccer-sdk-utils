@@ -24,8 +24,8 @@ def test(c):
 @task(aliases=["v"])
 def cover(c):
     """Runs PyTest unit and integration tests with coverage."""
-    c.run("coverage run -m pytest --cov=soccer_sdk_utils tests/unit")
-    c.run("coverage lcov -o ./coverage/lcov.info")
+    c.run("poetry run coverage run -m pytest --cov=soccer_sdk_utils tests/unit")
+    c.run("poetry run coverage lcov -o ./coverage/lcov.info")
 
 
 @task(aliases=["l"])
