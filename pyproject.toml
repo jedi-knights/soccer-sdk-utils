@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "soccer-sdk-utils"
-version = "0.0.1"
+version = "0.0.0"
 description = "A utility library for Soccer SDK packages."
 authors = ["Omar Crosby <omar.crosby@gmail.com>"]
 
@@ -43,9 +43,6 @@ version_variable = [
 ]
 version_toml = [
     "pyproject.toml:tool.poetry.version"
-]
-version_pattern = [
-    "README.md:rev: v{version}"
 ]
 major_on_zero = true
 branch = "main"
