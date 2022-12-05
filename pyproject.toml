@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "soccer-sdk-utils"
-version = "0.0.1"
+version = "0.0.0"
 description = "A utility library for Soccer SDK packages."
 authors = ["Omar Crosby <omar.crosby@gmail.com>"]
 
@@ -49,4 +49,4 @@ branch = "main"
 upload_to_pypi = true
 upload_to_release = false
 commit_subject = "chore: release {version} [skip ci] ***NO_CI***"
-build_command = "poetry build"
+build_command = "pip install --upgrade pip && pip install poetry && poetry install && poetry build"
