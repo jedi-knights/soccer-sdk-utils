@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.0.1 (2022-12-05)
+### Fix
+* **release:** Resetting versions ([`191418b`](https://github.com/ocrosby/soccer-sdk-utils/commit/191418b8b2fb3bcbc54dfa9d84fae6f82ecef456))
+
 ## v0.0.1 (2022-12-04)
 ### Fix
 * **release:** Resetting versions ([`04d7baa`](https://github.com/ocrosby/soccer-sdk-utils/commit/04d7baaf3c6be92fc527a5fdc5dd714f6f5f7fa9))
