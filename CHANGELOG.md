@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.0.1 (2022-12-06)
+### Fix
+* **release:** Resetting the version numbers. ([`fc32184`](https://github.com/ocrosby/soccer-sdk-utils/commit/fc3218484933e623f2b921bfc73a9bb4f5a89bf7))
+
 ## v0.0.1 (2022-12-05)
 ### Fix
 * **release:** Updating the build command to install poetry. ([`da74285`](https://github.com/ocrosby/soccer-sdk-utils/commit/da742855b470fb0f3397012aa94bb44123f700d6))
