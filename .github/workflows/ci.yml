@@ -59,10 +59,10 @@ jobs:
         with:
           github-token: ${{ secrets.github_token }}
 
-      - name: Test Semantic Release Version
-        run: |
-          source .venv/bin/activate
-          poetry run invoke check-version
+#      - name: Test Semantic Release Version
+#        run: |
+#          source .venv/bin/activate
+#          poetry run invoke check-version
 
   Release:
     needs: Quality
