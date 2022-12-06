@@ -13,6 +13,12 @@ def clean(c):
     c.run("rm -rf coverage")
     c.run("rm -rf dist")
     c.run("rm -f .coverage")
+    c.run("rm -f coverage.xml")
+    c.run("rm -rf htmlcov")
+    c.run("rm -rf tests/htmlcov")
+    c.run("rm -rf tests/.pytest_cache")
+    c.run("rm -rf ./.pytest_cache")
+    c.run("rm -f tests/coverage.xml")
 
 
 @task(aliases=["t"])
