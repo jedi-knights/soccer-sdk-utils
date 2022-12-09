@@ -80,6 +80,7 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v2
+        fetch-depth: 0
 
       - name: Setup Poetry
         uses: snok/install-poetry@v1
