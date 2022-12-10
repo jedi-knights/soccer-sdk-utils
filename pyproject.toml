@@ -47,4 +47,4 @@ branch = "main"
 upload_to_pypi = true
 upload_to_release = true
 commit_subject = "chore: release {version} [skip ci] ***NO_CI***"
-build_command = "pip install --upgrade pip && pip install poetry && poetry install && poetry build"
+build_command = "pip install --upgrade pip && pip install poetry && poetry install --no-dev && poetry build"
