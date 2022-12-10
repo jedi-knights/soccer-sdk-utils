@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.2 (2022-12-10)
+### Fix
+* **tools:** Adding urljoin and slugify to tools.py ([`ae204de`](https://github.com/ocrosby/soccer-sdk-utils/commit/ae204de89338e52e8f09d06e227246b561bd0524))
+
 ## v0.1.1 (2022-12-10)
 ### Fix
 * **semantic-release:** Updating the build command used by semantic release and removing duplicate steps. ([`5783a59`](https://github.com/ocrosby/soccer-sdk-utils/commit/5783a597073157078050c000d3bf203337aa33f5))
