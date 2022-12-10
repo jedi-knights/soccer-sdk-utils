@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.1 (2022-12-10)
+### Fix
+* **semantic-release:** Updating the build command used by semantic release and removing duplicate steps. ([`5783a59`](https://github.com/ocrosby/soccer-sdk-utils/commit/5783a597073157078050c000d3bf203337aa33f5))
+
 ## v0.1.0 (2022-12-09)
 ### Feature
 * **gender:** Adding a gender module ([`cb2887d`](https://github.com/ocrosby/soccer-sdk-utils/commit/cb2887d900ade41e054ba711f5ac21e7eb3fd96b))
