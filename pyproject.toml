@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "soccer-sdk-utils"
-version = "0.1.2"
+version = "0.1.3"
 description = "A utility library for Soccer SDK packages."
 authors = ["Omar Crosby <omar.crosby@gmail.com>"]
 

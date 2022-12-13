@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.3 (2022-12-13)
+### Fix
+* **poetry:** Moving requests-mock to dev dependencies. ([`868a7b8`](https://github.com/ocrosby/soccer-sdk-utils/commit/868a7b8b68ea9f84816b8c018f9c97ea43bf364d))
+* **poetry:** Moving requests-mock to dev dependencies. ([`0022362`](https://github.com/ocrosby/soccer-sdk-utils/commit/0022362f99b4d17f989e34f8a3cda93e896120d1))
+
 ## v0.1.2 (2022-12-10)
 ### Fix
 * **tools:** Adding urljoin and slugify to tools.py ([`ae204de`](https://github.com/ocrosby/soccer-sdk-utils/commit/ae204de89338e52e8f09d06e227246b561bd0524))
