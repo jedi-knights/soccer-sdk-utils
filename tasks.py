@@ -51,7 +51,7 @@ def lint(c):
     )
 
 
-@task(aliases=["b"], pre=[clean, lint, coverage], default=True)
+@task(aliases=["b"], pre=[clean, install, lint, coverage], default=True)
 def build(c):
     print("Building the project")
     c.run("python3 -m pip install --upgrade build")
