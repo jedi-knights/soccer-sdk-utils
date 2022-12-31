@@ -1,7 +1,10 @@
+import bs4
 import pytest
 
 from soccer_sdk_utils.tools import urljoin
 from soccer_sdk_utils.tools import slugify
+from soccer_sdk_utils.tools import get_text_from_anchor
+from soccer_sdk_utils.tools import get_href_from_anchor
 
 
 class TestSlugify:
@@ -82,3 +85,62 @@ class TestUrlJoin:
 
     def test_base_is_empty_and_path_ends_with_slash(self):
         assert urljoin("", "path/") == "path/"
+
+class TestGetHrefFromAnchor:
+    def test_undefined(self):
+        assert get_href_from_anchor(None) is None
+
+    def test_anchor(self):
+        html = "<a href='https://www.acme.com'>Acme</a>"
+        anchor = bs4.BeautifulSoup(html, "html.parser")
+        assert get_href_from_anchor(anchor) == "https://www.acme.com"
+
+    def test_container(self):
+        html = "<div><a href='https://www.acme.com'>Acme</a></div>"
+        container = bs4.BeautifulSoup(html, "html.parser")
+        assert get_href_from_anchor(container) == "https://www.acme.com"
+
+    def test_no_anchor(self):
+        html = "<div>Acme</div>"
+        container = bs4.BeautifulSoup(html, "html.parser")
+        assert get_href_from_anchor(container) is None
+
+    def test_no_href(self):
+        html = "<a>Acme</a>"
+        anchor = bs4.BeautifulSoup(html, "html.parser")
+        assert get_href_from_anchor(anchor) is None
+
+    def test_empty_href(self):
+        html = "<a href=''>Acme</a>"
+        anchor = bs4.BeautifulSoup(html, "html.parser")
+        assert get_href_from_anchor(anchor) is None
+
+
+class TestGetTextFromAnchor:
+    def test_undefined(self):
+        assert get_text_from_anchor(None) is None
+
+    def test_anchor(self):
+        html = "<a href='https://www.acme.com'>Acme</a>"
+        anchor = bs4.BeautifulSoup(html, "html.parser")
+        assert get_text_from_anchor(anchor) == "Acme"
+
+    def test_container(self):
+        html = "<div><a href='https://www.acme.com'>Acme</a></div>"
+        container = bs4.BeautifulSoup(html, "html.parser")
+        assert get_text_from_anchor(container) == "Acme"
+
+    def test_no_anchor(self):
+        html = "<div>Acme</div>"
+        container = bs4.BeautifulSoup(html, "html.parser")
+        assert get_text_from_anchor(container) is None
+
+    def test_no_text(self):
+        html = "<a href='https://www.acme.com'></a>"
+        anchor = bs4.BeautifulSoup(html, "html.parser")
+        assert get_text_from_anchor(anchor) is None
+
+    def test_text_with_only_spaces(self):
+        html = "<a href='https://www.acme.com'>  </a>"
+        anchor = bs4.BeautifulSoup(html, "html.parser")
+        assert get_text_from_anchor(anchor) is None
