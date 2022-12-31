@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.5 (2022-12-31)
+### Fix
+* **tools:** Adding anchor utility functions ([`6f991c2`](https://github.com/ocrosby/soccer-sdk-utils/commit/6f991c2e9b09b60ee632c1708b65bb5c9381870e))
+
 ## v0.1.4 (2022-12-31)
 ### Fix
 * **poetry:** Removing poetry ([`3380715`](https://github.com/ocrosby/soccer-sdk-utils/commit/33807159fe54073316d8671f57852cef13287bfc))
