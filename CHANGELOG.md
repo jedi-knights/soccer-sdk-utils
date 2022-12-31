@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.4 (2022-12-31)
+### Fix
+* **poetry:** Removing poetry ([`3380715`](https://github.com/ocrosby/soccer-sdk-utils/commit/33807159fe54073316d8671f57852cef13287bfc))
+
 ## v0.1.3 (2022-12-13)
 ### Fix
 * **poetry:** Moving requests-mock to dev dependencies. ([`868a7b8`](https://github.com/ocrosby/soccer-sdk-utils/commit/868a7b8b68ea9f84816b8c018f9c97ea43bf364d))
