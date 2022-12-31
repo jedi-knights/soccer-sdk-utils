@@ -10,9 +10,10 @@ This package contains general purpose utilities to be utilized in various other 
 Install dependencies
 
 ```bash
-$ poetry install
+$ pip install --upgrade pip 
+$ pip install -r requirements-dev.txt
+$ invoke install
 ```
-
 
 Update dependencies
 
@@ -49,4 +50,10 @@ Build the project
 
 ```bash
 $ invoke build
+```
+
+The default task is build so by calling invoke you will build the project
+
+```bash
+$ invoke
 ```
