@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.6 (2022-12-31)
+### Fix
+* **setup:** Adding setup config ([`d8235ba`](https://github.com/ocrosby/soccer-sdk-utils/commit/d8235bacb21178486b76d095194bb1e46b206d2b))
+
 ## v0.1.5 (2022-12-31)
 ### Fix
 * **tools:** Adding anchor utility functions ([`6f991c2`](https://github.com/ocrosby/soccer-sdk-utils/commit/6f991c2e9b09b60ee632c1708b65bb5c9381870e))
