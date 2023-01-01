@@ -25,6 +25,9 @@ keywords = [
 "Homepage" = "https://github.com/ocrosby/soccer-sdk-utils"
 "Bug Tracker" = "https://github.com/ocrosby/soccer-sdk-utils/issues"
 
+[tool.setuptools]
+packages = ["soccer_sdk_utils"]
+
 [tool.semantic_release]
 version_source = "commit"
 version_variable = [
