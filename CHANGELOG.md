@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.7 (2023-01-01)
+### Fix
+* **setup:** Replacing setup.cfg ([`84ac74e`](https://github.com/ocrosby/soccer-sdk-utils/commit/84ac74ecc236ee6f0d3efdb1f72becbd6da575c7))
+
 ## v0.1.6 (2022-12-31)
 ### Fix
 * **setup:** Adding setup config ([`d8235ba`](https://github.com/ocrosby/soccer-sdk-utils/commit/d8235bacb21178486b76d095194bb1e46b206d2b))
