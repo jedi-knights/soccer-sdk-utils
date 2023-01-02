@@ -26,7 +26,12 @@ keywords = [
 "Bug Tracker" = "https://github.com/ocrosby/soccer-sdk-utils/issues"
 
 [tool.setuptools]
-packages = ["soccer_sdk_utils"]
+packages = [
+    "soccer_sdk_utils",
+    "soccer_sdk_utils.dao",
+    "soccer_sdk_utils.model",
+    "soccer_sdk_utils.schema"
+]
 
 [tool.semantic_release]
 version_source = "commit"
