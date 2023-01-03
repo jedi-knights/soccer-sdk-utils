@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.11 (2023-01-03)
+### Fix
+* **division:** Adding the division module ([`8da9d09`](https://github.com/ocrosby/soccer-sdk-utils/commit/8da9d09501e1c2d39b7bb7c8edafe1fda2455f3d))
+
 ## v0.1.10 (2023-01-03)
 ### Fix
 * **setup:** Updating dependencies ([`eedc06e`](https://github.com/ocrosby/soccer-sdk-utils/commit/eedc06e29aac765f5c6d04fb33dfdf8eb7b6097e))
