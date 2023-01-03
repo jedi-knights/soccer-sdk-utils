@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.10 (2023-01-03)
+### Fix
+* **setup:** Updating dependencies ([`eedc06e`](https://github.com/ocrosby/soccer-sdk-utils/commit/eedc06e29aac765f5c6d04fb33dfdf8eb7b6097e))
+
 ## v0.1.9 (2023-01-02)
 ### Fix
 * **setup:** Adding dao, model, and schema packages ([`1cac0ec`](https://github.com/ocrosby/soccer-sdk-utils/commit/1cac0ec7434bcc44caee7d4cb9217cdfc3d80000))
