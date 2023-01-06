@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.12 (2023-01-06)
+### Fix
+* **conference:** Removing gender from the model ([`8ed59ef`](https://github.com/ocrosby/soccer-sdk-utils/commit/8ed59ef12d55fc28a085309cab348fb2a6a76b73))
+
 ## v0.1.11 (2023-01-03)
 ### Fix
 * **division:** Adding the division module ([`8da9d09`](https://github.com/ocrosby/soccer-sdk-utils/commit/8da9d09501e1c2d39b7bb7c8edafe1fda2455f3d))
