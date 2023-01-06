@@ -8,7 +8,6 @@ class Conference:
     def __init__(self, **kwargs):
         self.id = kwargs.get("id")
         self.name = kwargs.get("name")
-        self.gender = kwargs.get("gender")
         self.division = kwargs.get("division")
         self.ids = kwargs.get("ids")
         self.urls = kwargs.get("urls")
