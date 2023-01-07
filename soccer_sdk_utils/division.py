@@ -11,7 +11,21 @@ class Division(Enum):
     NJCAA = 5
 
     def __repr__(self):
-        return self
+        if self == Division.All:
+            return "All"
+        elif self == Division.DI:
+            return "DI"
+        elif self == Division.DII:
+            return "DII"
+        elif self == Division.DIII:
+            return "DIII"
+        elif self == Division.NAIA:
+            return "NAIA"
+        elif self == Division.NJCAA:
+            return "NJCAA"
+        else:
+            return "Unknown"
+
 
     def __str__(self):
         return self.name.lower()
@@ -36,10 +50,5 @@ DivisionList = [Division.DI, Division.DII, Division.DIII, Division.NAIA, Divisio
 
 if __name__ == "__main__":
     division = Division.DI
-
-    print(division)
-    print(division.name)
-    print(division.value)
-    print(str(division))
 
     print(repr(division))
