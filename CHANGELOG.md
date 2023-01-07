@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.13 (2023-01-07)
+### Fix
+* **division:** Returning a string from __repr__ ([`b904fa9`](https://github.com/ocrosby/soccer-sdk-utils/commit/b904fa923b93215957eb4f020c2507a0a4a01673))
+
 ## v0.1.12 (2023-01-06)
 ### Fix
 * **conference:** Removing gender from the model ([`8ed59ef`](https://github.com/ocrosby/soccer-sdk-utils/commit/8ed59ef12d55fc28a085309cab348fb2a6a76b73))
