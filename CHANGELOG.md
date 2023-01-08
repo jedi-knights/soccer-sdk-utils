@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.14 (2023-01-08)
+### Fix
+* **gender:** Returning a string from __repr__ ([`9f0bfcf`](https://github.com/ocrosby/soccer-sdk-utils/commit/9f0bfcf4d862521fabdb4bc703d05d6102a87657))
+
 ## v0.1.13 (2023-01-07)
 ### Fix
 * **division:** Returning a string from __repr__ ([`b904fa9`](https://github.com/ocrosby/soccer-sdk-utils/commit/b904fa923b93215957eb4f020c2507a0a4a01673))
