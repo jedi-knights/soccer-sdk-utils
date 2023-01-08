@@ -8,7 +8,14 @@ class Gender(Enum):
     Female = 2
 
     def __repr__(self):
-        return self
+        if self == Gender.All:
+            return "All"
+        elif self == Gender.Male:
+            return "Male"
+        elif self == Gender.Female:
+            return "Female"
+        else:
+            return "Unknown"
 
     def __str__(self):
         return self.name.lower()
@@ -33,3 +40,9 @@ def string_to_gender(value: str | None) -> Gender:
         return Gender.Female
     else:
         raise ValueError(f"Invalid gender string '{value}'!")
+
+
+if __name__ == "__main__":
+    print(repr(Gender.All))
+    print(repr(Gender.Male))
+    print(repr(Gender.Female))
