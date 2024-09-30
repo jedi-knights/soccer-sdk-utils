@@ -31,7 +31,7 @@ $ invoke clean
 Analyze syntax
 
 ```bash
-$ invoke lint
+$ invoke lint.yml
 ```
 
 Run tests

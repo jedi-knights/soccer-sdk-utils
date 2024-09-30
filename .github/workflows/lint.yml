@@ -1,4 +1,4 @@
-name: Soccer SDK Utils
+name: Analyze Syntax
 
 
 # When this action will be executed
@@ -6,11 +6,13 @@ on:
   # Automatically trigger it when detected changes in repo
   push:
     branches:
-      - 'main'
-      - 'feature/*'
-    paths:
       - '**'
-      - '.github/workflows/ci.yml'
+    paths:
+      - 'soccer_sdk_utils/**'
+      - 'tests/**'
+      - 'tasks.py'
+      - 'setup.py'
+      - '.github/workflows/lint.yml'
 
   # Allow manually trigger
   workflow_dispatch: {}

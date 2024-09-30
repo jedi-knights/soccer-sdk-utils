@@ -21,14 +21,31 @@ keywords = [
     "scraping"
 ]
 dependencies = [
-    "beautifulsoup4 == 4.11.1",
-    "flask == 2.2.2",
-    "flask-bcrypt == 1.0.1",
-    "marshmallow == 3.18.0",
-    "python-dotenv == 0.21.0",
-    "requests == 2.28.1",
+    "bs4",
+    "flask",
+    "flask-bcrypt",
+    "marshmallow",
+    "python-dotenv",
+    "requests",
     "boto3",
-    "botocore"
+    "botocore",
+    "pydantic",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "pytest-bdd",
+    "pytest-mock",
+    "flake8",
+    "coverage",
+    "invoke",
+    "python-semantic-release",
+    "requests-mock",
+    "Sphinx",
+    "sphinx-rtd-theme",
+    # Add other development dependencies here
 ]
 
 [project.urls]
