@@ -1,9 +1,25 @@
 from invoke import task
 
+FILES_TO_REMOVE = [
+    "*.png",
+    ".coverage",
+    "coverage.xml",
+]
+
+DIRECTORIES_TO_REMOVE = [
+    "coverage",
+    "dist",
+    "htmlcov",
+    "tests/htmlcov",
+    "tests/.pytest_cache",
+    "./.pytest_cache",
+    "tests/coverage.xml",
+]
 
 @task(aliases=["i"])
 def install(c):
-    c.run("pip install -r requirements.txt")
+    print("Installing dependencies...")
+    c.run("pip install -e '.[dev]'")
 
 
 @task(aliases=["u"])
@@ -14,17 +30,20 @@ def update_pip(c):
 
 @task(aliases=["c"])
 def clean(c):
+    """
+    Cleans up the project.
+
+    :param c: Invoke context
+    :return: None
+    :raises: None
+    """
     print("Cleaning up...")
-    c.run("rm -f *.png")
-    c.run("rm -rf coverage")
-    c.run("rm -rf dist")
-    c.run("rm -f .coverage")
-    c.run("rm -f coverage.xml")
-    c.run("rm -rf htmlcov")
-    c.run("rm -rf tests/htmlcov")
-    c.run("rm -rf tests/.pytest_cache")
-    c.run("rm -rf ./.pytest_cache")
-    c.run("rm -f tests/coverage.xml")
+
+    print(f"Removing files: {FILES_TO_REMOVE}")
+    c.run(f"rm -f {' '.join(FILES_TO_REMOVE)}")
+
+    print(f"Removing directories: {DIRECTORIES_TO_REMOVE}")
+    c.run(f"rm -rf {' '.join(DIRECTORIES_TO_REMOVE)}")
 
 
 @task(aliases=["t"])
