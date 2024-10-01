@@ -21,7 +21,7 @@ class MetaProperty:
     @value.setter
     def value(self, input_value: str):
         if input_value is not None:
-            if type(input_value) != str:
+            if not isinstance(input_value, str):
                 input_value = str(input_value)
 
             input_value = input_value.strip()

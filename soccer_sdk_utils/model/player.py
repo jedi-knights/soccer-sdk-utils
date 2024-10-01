@@ -113,7 +113,7 @@ class Player:
     def add_property(self, name: str, value: str | None):
         if value is not None:
 
-            if type(value) == str:
+            if isinstance(value, str):
                 value = value.strip()
 
                 if len(value) == 0:

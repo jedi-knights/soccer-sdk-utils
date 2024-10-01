@@ -46,6 +46,7 @@ def urljoin(base: str | None, path: str | None) -> str:
 
     return str(f"{base}/{path}")
 
+
 def get_href_from_anchor(anchor):
     if anchor is None:
         return None

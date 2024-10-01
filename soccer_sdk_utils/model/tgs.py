@@ -53,7 +53,7 @@ class Flight:
             f"name={self.name}",
             f"teams_count={self.teams_count}",
             f"has_active_schedule={self.has_active_schedule}",
-            f"hide_settings={self.hide_settings}"
+            f"hide_settings={self.hide_settings}",
         ]
 
         return f"Flight({', '.join(attribute_value_pairs)})"

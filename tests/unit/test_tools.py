@@ -86,6 +86,7 @@ class TestUrlJoin:
     def test_base_is_empty_and_path_ends_with_slash(self):
         assert urljoin("", "path/") == "path/"
 
+
 class TestGetHrefFromAnchor:
     def test_undefined(self):
         assert get_href_from_anchor(None) is None

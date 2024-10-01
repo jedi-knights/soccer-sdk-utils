@@ -16,6 +16,7 @@ DIRECTORIES_TO_REMOVE = [
     "tests/coverage.xml",
 ]
 
+
 @task(aliases=["i"])
 def install(c):
     print("Installing dependencies...")
@@ -59,12 +60,16 @@ def coverage(c):
     c.run("coverage lcov -o ./coverage/lcov.info")
 
 
-@task(aliases=["l"])
+@task(aliases=["f"])
+def format(c):
+    print("Formatting...")
+    c.run("black .")
+
+
+@task(pre=[format], aliases=["l"])
 def lint(c):
     print("Linting...")
-    c.run(
-        "flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics"
-    )
+    c.run("flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics")
     c.run(
         "flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics"
     )

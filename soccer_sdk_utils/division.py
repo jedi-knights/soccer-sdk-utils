@@ -26,7 +26,6 @@ class Division(Enum):
         else:
             return "Unknown"
 
-
     def __str__(self):
         return self.name.lower()
 
