@@ -7,10 +7,8 @@ from abc import ABC, abstractmethod
 
 HOST = "public.totalglobalsports.com"
 
-HEADERS = {
-    "Content-Type": "application/json",
-    "Accept": "application/json"
-}
+HEADERS = {"Content-Type": "application/json", "Accept": "application/json"}
+
 
 def fetch_data(host: str, endpoint: str) -> dict[any, any]:
     url = f"https://{host}{endpoint}"
@@ -42,7 +40,6 @@ def fetch_data(host: str, endpoint: str) -> dict[any, any]:
         print(f"OS error occurred: {e}")
         raise
 
-
     try:
         json_data = json.loads(response_body)
     except json.JSONDecodeError as e:
@@ -51,15 +48,18 @@ def fetch_data(host: str, endpoint: str) -> dict[any, any]:
 
     return json_data
 
+
 class AbstractRetriever(ABC):
     @abstractmethod
     def get(self) -> dict[any, any]:
         pass
 
+
 class StatesRetriever(AbstractRetriever):
     """
     This class is responsible for retrieving states from the TGS API.
     """
+
     def get(self) -> dict[any, any]:
         json_data = fetch_data(HOST, "/api/Association/get-all-states")
         inner_data = json_data.get("data")
@@ -69,10 +69,12 @@ class StatesRetriever(AbstractRetriever):
 
         return inner_data
 
+
 class CountriesRetriever(AbstractRetriever):
     """
     This class is responsible for retrieving countries from the TGS API.
     """
+
     def get(self) -> Optional[list[any]]:
         json_data = fetch_data(HOST, "/api/Association/get-all-countries")
         inner_data = json_data.get("data")
@@ -90,6 +92,7 @@ class OrganizationsRetriever(AbstractRetriever):
     """
     This class is responsible for retrieving organizations from the TGS API.
     """
+
     def __init__(self, ecnl_only: bool = True):
         self.ecnl_only = ecnl_only
 
@@ -142,6 +145,7 @@ class OrganizationsRetriever(AbstractRetriever):
 
         return None
 
+
 if __name__ == "__main__":
     states = StatesRetriever().get()
     all_organizations = OrganizationsRetriever(False).get()
@@ -157,7 +161,12 @@ if __name__ == "__main__":
     print(json.dumps(ecnl_organizations, indent=4))
 
     print("\nOrganizations by name:")
-    print(json.dumps(OrganizationsRetriever(False).get_by_name("Texas Club Soccer League"), indent=4))
+    print(
+        json.dumps(
+            OrganizationsRetriever(False).get_by_name("Texas Club Soccer League"),
+            indent=4,
+        )
+    )
 
     print("\nOrganizations by ID:")
     print(json.dumps(OrganizationsRetriever(False).get_by_id(23), indent=4))
