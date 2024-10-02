@@ -34,7 +34,7 @@ jobs:
         run: pip install '.[dev]'
 
       - name: Analyze Syntax
-        run: inv lint.yml
+        run: inv lint
 
       - name: Run Tests
         run: inv coverage
