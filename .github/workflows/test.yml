@@ -1,0 +1,38 @@
+name: Run Tests
+
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches:
+      - '**'
+    paths:
+      - 'soccer_sdk_utils/**'
+      - 'tests/**'
+      - 'tasks.py'
+      - 'setup.py'
+      - 'pyproject.toml'
+      - '.github/workflows/test.yml'
+
+  # Allow manually trigger
+  workflow_dispatch: {}
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python "3.10.8"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Dependencies
+        run: pip install '.[dev]'
+
+      - name: Run Tests
+        run: inv test
