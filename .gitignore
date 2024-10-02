@@ -140,3 +140,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 /development_database.db
+
+.idea/
+.vscode/
+
+node_modules/
