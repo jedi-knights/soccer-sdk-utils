@@ -1,6 +1,7 @@
 {
   "name": "soccer-sdk-utils",
   "version": "0.0.0",
+  "type": "module",
   "description": "This package contains general purpose utilities to be utilized in various other Soccer related SDK products.",
   "main": "index.js",
   "directories": {
